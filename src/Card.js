@@ -16,5 +16,5 @@ function Card(props) {
         </div>
     )
 }
-//export default Tooltip;
+//export default Card;
 export default Card;
