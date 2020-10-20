@@ -7,18 +7,19 @@ import STORE from './store.js';
 
 describe('List component', () => {
   it('renders without crashing', () => {
-    const div = document.createElement('div');
     let passedInCards = [];
+    const div = document.createElement('div');
     ReactDOM.render(<List cards={passedInCards} />, div)
     ReactDOM.unmountComponentAtNode(div);
   });
 
   it('renders the UI as expected', () => {
+    let passedInCards = [];
     const tree = renderer
       .create(<List
         key={STORE.lists.id}
         title={STORE.lists.header}
-        content={STORE.allCards.cards}
+        cards={passedInCards}
       >                  
       </List>)
       .toJSON();
